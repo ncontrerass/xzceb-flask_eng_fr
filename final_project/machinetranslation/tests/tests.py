@@ -3,7 +3,7 @@ This file contains a series of test.
 """
 import unittest
 
-from translator import englishToFrench, frenchToEnglish
+from translator import englishtofrench, frenchtoenglish
 
 
 class TestTranslator(unittest.TestCase):
@@ -14,9 +14,9 @@ class TestTranslator(unittest.TestCase):
         """
         Test - from english to french
         """
-        self.assertEqual(englishToFrench("Hello"), "Bonjour")
-        self.assertEqual(englishToFrench("How are you?"), "Comment es-tu?")
-        self.assertRaises(ValueError,englishToFrench,None)
+        self.assertEqual(englishtofrench("Hello"), "Bonjour")
+        self.assertEqual(englishtofrench("How are you?"), "Comment es-tu?")
+        self.assertRaises(ValueError,englishtofrench,None)
 
 
 class TestEnglishToFrenchNull(unittest.TestCase):
@@ -27,7 +27,7 @@ class TestEnglishToFrenchNull(unittest.TestCase):
         """
         Test null
         """
-        self.assertRaises(ValueError,englishToFrench,None)
+        self.assertRaises(ValueError,englishtofrench,None)
 
 
 class TestTranslatorFrench(unittest.TestCase):
@@ -38,9 +38,9 @@ class TestTranslatorFrench(unittest.TestCase):
         """
         Tests
         """
-        self.assertEqual(frenchToEnglish("Bonjour"), "Hello")
-        self.assertEqual(frenchToEnglish("Comment es-tu?"), "How are you?")
-        self.assertRaises(ValueError,frenchToEnglish,None)
+        self.assertEqual(frenchtoenglish("Bonjour"), "Hello")
+        self.assertEqual(frenchtoenglish("Comment es-tu?"), "How are you?")
+        self.assertRaises(ValueError,frenchtoenglish,None)
 
 
 class TestFrenchToEnglishhNull(unittest.TestCase):
@@ -51,6 +51,6 @@ class TestFrenchToEnglishhNull(unittest.TestCase):
         """
         Test null
         """
-        self.assertRaises(ValueError,frenchToEnglish,None)
+        self.assertRaises(ValueError,frenchtoenglish,None)
 
 unittest.main()
